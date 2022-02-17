@@ -1,17 +1,17 @@
 import Base from './Base.js';
 
 class Title extends Base {
-	constructor() {
-		super();
-	}
+  constructor() {
+    super();
+  }
 
-	static get name() {
-		return `${this.ns}-title`;
-	}
+  static get name() {
+    return `${this.ns}-title`;
+  }
 
-	connectedCallback() {
-		this.attachShadow({ mode: 'open' });
-		this.shadowRoot.innerHTML = `
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
     <style>
       h1 {
         display: flex;
@@ -23,7 +23,7 @@ class Title extends Base {
     </style>
     <h1><slot></slot></h1>
 `;
-	}
+  }
 }
 
 customElements.define(Title.name, Title);

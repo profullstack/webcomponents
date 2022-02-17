@@ -1,9 +1,9 @@
 :root {
-	--bgColor: #fff;
-	--color: #000;
+  --bgColor: #fff;
+  --color: #000;
 }
 
 [data-theme='dark'] {
-	--bgColor: #000;
-	--color: #fff;
+  --bgColor: #000;
+  --color: #fff;
 }

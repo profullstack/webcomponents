@@ -1,17 +1,17 @@
 import Base from './Base.js';
 
 class Grid extends Base {
-	constructor() {
-		super();
-	}
+  constructor() {
+    super();
+  }
 
-	static get name() {
-		return `${this.ns}-grid`;
-	}
+  static get name() {
+    return `${this.ns}-grid`;
+  }
 
-	connectedCallback() {
-		this.attachShadow({ mode: 'open' });
-		this.shadowRoot.innerHTML = `
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
 
 <style>
 	.grid {
@@ -27,7 +27,7 @@ class Grid extends Base {
 <div class="grid"><slot></slot></div>
 
 `;
-	}
+  }
 }
 
 customElements.define(Grid.name, Grid);
