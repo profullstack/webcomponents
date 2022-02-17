@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -19,11 +19,20 @@
 		<meta name="theme-color" content="#ffffff" />
 		-->
 		<title>Web Components Engineer</title>
-		<script type="module" src="/components/wce-navbar.js"></script>
+		<script type="module" src="/components/NavBar.js"></script>
+		<script type="module" src="/components/Title.js"></script>
+		<script type="module" src="/components/Grid.js"></script>
+		<script type="module" src="/components/GridColumn.js"></script>
 	</head>
 	<body>
-		<h1>Web Components Engineer</h1>
-
-		<wce-navbar />
+		<wce-grid>
+			<wce-grid-column>
+				<h1>Web Components Engineer</h1>
+			</wce-grid-column>
+			<wce-grid-column>
+				<wce-title>Title</wce-title>
+				<wce-navbar></wce-navbar>
+			</wce-grid-column>
+		</wce-grid>
 	</body>
 </html>

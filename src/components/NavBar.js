@@ -1,12 +1,17 @@
-import WCEBase from './wce-base.js';
+import Base from './Base.js';
 
-class WCENavBar extends WCEBase {
-  constructor() {
-    super();
-  }
+class NavBar extends Base {
+	constructor() {
+		super();
+	}
 
-  connectedCallback() {
-    this.innerHTML = `
+	static get name() {
+		return `${this.ns}-navbar`;
+	}
+
+	connectedCallback() {
+		this.attachShadow({ mode: 'open' });
+		this.shadowRoot.innerHTML = `
     <style>
       .navbar {
 				margin-top: 1rem;
@@ -27,12 +32,14 @@ class WCENavBar extends WCEBase {
     </style>
     <nav class="navbar">
         <a href="/recent.html" class="${this.isCurrentPage('/recent') ? 'active' : ''}">recent</a>
-        <a href="/popular.html" class="${this.isCurrentPage('/popular') ? 'active' : ''}">popular</a>
+        <a href="/popular.html" class="${
+					this.isCurrentPage('/popular') ? 'active' : ''
+				}">popular</a>
         <a href="/tags.html" class="${this.isCurrentPage('/tags') ? 'active' : ''}">tags</a>
         <a href="/" class="${this.isCurrentPage('/$') ? 'active' : ''}">home</a>
     </nav>
 `;
-  }
+	}
 }
 
-customElements.define("wce-navbar", WCENavBar);
+customElements.define(NavBar.name, NavBar);

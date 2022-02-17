@@ -3,7 +3,7 @@
 	--color: #000;
 }
 
-[data-theme=dark] {
+[data-theme='dark'] {
 	--bgColor: #000;
 	--color: #fff;
 }

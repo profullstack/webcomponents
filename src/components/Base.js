@@ -1,7 +1,12 @@
-class WCEBase extends HTMLElement {
-  constructor() {
-    super();
-  }
+class Base extends HTMLElement {
+	constructor() {
+		super();
+		this.ns = 'wce';
+	}
+
+	static get ns() {
+		return 'wce';
+	}
 
 	isCurrentPage(page) {
 		const path = new URL(window.location).pathname;
@@ -10,4 +15,4 @@ class WCEBase extends HTMLElement {
 	}
 }
 
-export default WCEBase;
+export default Base;
