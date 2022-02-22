@@ -15,6 +15,7 @@ class NavBar extends Base {
     <style>
       .navbar {
 		margin-top: 1rem;
+    
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -32,9 +33,8 @@ class NavBar extends Base {
     </style>
     <nav class="navbar">
         <a href="/recent.html" class="${this.isCurrentPage('/recent') ? 'active' : ''}">recent</a>
-        <a href="/popular.html" class="${
-          this.isCurrentPage('/popular') ? 'active' : ''
-        }">popular</a>
+        <a href="/popular.html" class="${this.isCurrentPage('/popular') ? 'active' : ''
+      }">popular</a>
         <a href="/tags.html" class="${this.isCurrentPage('/tags') ? 'active' : ''}">tags</a>
         <a href="/" class="${this.isCurrentPage('/$') ? 'active' : ''}">home</a>
     </nav>
